@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg,#242121,#220A0A);
+}
+h2{
+    margin-bottom: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 35px;
+    position: relative;
+    color: #0e3742;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,#0004);
+    margin-bottom: 10%;
+    line-height: 0.70em;
+    outline: none;
+    animation: animate 5s linear infinite;
+}
+@keyframes animate{
+    0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%
+    {
+        color: #0e3742;
+        box-shadow: none;
+    }
+    18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%
+    {
+        color: #ffff;
+        box-shadow: 0 0 10px #03bcf4,
+        0 0 20px #03bcf4,
+        0 0 40px #03bcf4,
+        0 0 80px #03bcf4,
+        0 0 160px #03bcf4,
+    }
+}
+input{
+    background-color: #F6D6EE;
+    border: 2px solid #41f321;
+    display: inline-block;
+    text-decoration: none;
+}
+.Mp{
+    margin-left: 35%;
+}
+.Pp{
+    width: 100%;
+    margin-top: 50px;
+}
+.Descripcion{
+    display: inline-block;
+    border: 2px solid #41f321;
+    width: 100%;
+    margin-top: 50px;
+    height: 100px;
+    border-radius: 5px;
+    background-color: #F6D6EE;
+}
+.Btn{
+    background-color: black;
+    border: 2px solid #41f321;
+    position: relative;
+    margin-top: 45px;
+    margin-left: 30%;
+    width: 37%;
+    display: inline-block;
+    text-decoration: none;
+    color: #41f321;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    transition: 0.5;
+}
+.Btn:hover{
+    color: #111111;
+}
+.Descripcion:focus, .Pp:focus, .Mp:focus, .Np:focus{
+    background: #CBC5C9;
+}
