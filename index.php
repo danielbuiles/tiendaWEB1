@@ -10,13 +10,15 @@
 <body>
     <div class="Player">
     <h2>Administracion de Productos</h2>
+    <div class="NM">
     <input type="Text" placeholder="Nombre Producto"  class="Np" Name="Np">
     <input type="Text" placeholder="Marca Producto" class="Mp" Name="Mp">
+    </div>
         </br>
     <input type="number" placeholder="Precio Producto" class="Pp" Name="Pp">
         </br>
         <textarea name="comentarios" class="Descripcion" placeholder="Descripcion"></textarea>
-        <input type="submit" value="👊Clickea👊" class="Btn" Name="Btn">
+        <input type="submit" value="Clickea" class="Btn" Name="Btn">
     </div>
     <footer>
 <!-- jQuery and JS bundle w/ Popper.js -->
