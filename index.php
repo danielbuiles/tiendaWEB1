@@ -8,6 +8,7 @@
     <title>Tabla</title>
 </head>
 <body>
+<form action="Productos.php" method="POST">
     <div class="Player">
     <h2>Administracion de Productos</h2>
     <div class="NM">
@@ -26,5 +27,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 <!--Created By Daniel Builes Garcia-2020-->
     </footer>
+    </form>
 </body>
 </html>
