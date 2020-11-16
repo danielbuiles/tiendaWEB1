@@ -8,7 +8,7 @@
     <title>Tabla</title>
 </head>
 <body>
-<form action="Productos.php" method="POST" class="frm">
+<form action="RegistrarProductos.php" method="POST" class="frm">
     <div class="Player">
     <h2>Administracion de Productos</h2>
     <div class="NM">
