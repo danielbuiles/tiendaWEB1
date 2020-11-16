@@ -17,7 +17,8 @@ class Base_Datos
         $LanzarDatos=$Conectar->prepare($consultaSQL);
         $Correr=$LanzarDatos->execute();
         if ($Correr) {
-            echo("Datos enviados");
+            $Validacion1="Enviados!";
+            return $Validacion1;
         }
         else {
             echo("Datos no enviados");
