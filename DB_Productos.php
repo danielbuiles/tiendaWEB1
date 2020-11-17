@@ -5,7 +5,7 @@ class Base_Datos
     public $Password="";
     public function Conexion_DB(){
         try {
-            $Datos="mysql:host=localhost;dbname=registros";
+            $Datos="mysql:host=localhost;dbname=tienda";
             $Enlace=new PDO($Datos,$this->Usuario,$this->Password);
             return $Enlace;
         } catch (PDOException $Error) {
@@ -25,15 +25,29 @@ class Base_Datos
         }
     }
     public function BuscarDatos($consultaSQL){
-        $conectar=$this->Conexion_DB();
+        $Conectar=$this->Conexion_DB();
 
-        $Lanzar=$conectar->prepare($consultaSQL);
+        $Preparo=$Conectar->prepare($consultaSQL);
 
-        $Lanzar->setFetchMode(PDO::FETCH_ASSOC);
+        $Preparo->setFetchMode(PDO::FETCH_ASSOC);
 
-        $Resultado=$Lanzar->execute();
+        $Ejecucion=$Preparo->execute();
 
-        return ($Lanzar->FetchAll());
+        return ($Preparo->fetchAll());
+    }
+    public function EliminarDatos($consultaSQL){
+        $Conexin=$this->Conexion_DB();
+
+        $Catch=$Conexin->prepare($consultaSQL);
+
+        $get=$Catch->execute();
+
+        if ($get) {
+            echo("Datos eliminados");
+        }
+        else {
+            echo("Errodesconocidor");
+        }
     }
 }
 
