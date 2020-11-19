@@ -1,4 +1,3 @@
-
 <?php
     include("DB_Productos.php");
     if (isset($_POST["Btn"])) {
@@ -10,7 +9,7 @@
 
         $Catch=new Base_Datos();
         
-        $consultaSQL="INSERT INTO productos( Nombre, Marca, Precio, Descripcion,Foto) VALUES ('$NombreProducto','$MarcaProducto','$PrecioProducto','$Descripcion','$Url')";
+        $consultaSQL="INSERT INTO `productos`(`Nombre`, `Marca`, `Precio`, `Descripcion`, `Foto`) VALUES ('$NombreProducto','$MarcaProducto','$PrecioProducto','$Descripcion','$Url')";
 
         $Catch->AgregarDatos($consultaSQL);
 
@@ -27,6 +26,6 @@
 
 </head>
 <body>
-    <h2 data-text="Enviados!"><?php echo($Resultado) ?></h2>
+    <h2 data-text="Agregados!"><?php echo($Resultado) ?></h2>
 </body>
 </html>

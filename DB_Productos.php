@@ -13,16 +13,21 @@ class Base_Datos
         }
     }
     public function AgregarDatos($consultaSQL){
+        try{
         $Conectar=$this->Conexion_DB();
+
         $LanzarDatos=$Conectar->prepare($consultaSQL);
+
         $Correr=$LanzarDatos->execute();
-        if ($Correr) {
-            $Validacion1="Enviados!";
-            return $Validacion1;
+
+        $Validacion="Agregados!";
+
+        return $Validacion;
         }
-        else {
-            echo("Datos no enviados");
+        catch(PDOException $Error){
+            echo( $Error.getMessage());
         }
+        
     }
     public function BuscarDatos($consultaSQL){
         $Conectar=$this->Conexion_DB();
@@ -41,13 +46,6 @@ class Base_Datos
         $Catch=$Conexin->prepare($consultaSQL);
 
         $get=$Catch->execute();
-
-        if ($get) {
-            echo("Datos eliminados");
-        }
-        else {
-            echo("Errodesconocidor");
-        }
     }
 }
 
