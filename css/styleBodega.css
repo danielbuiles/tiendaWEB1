@@ -65,3 +65,6 @@ body{
 .cardh-100:hover h5{
     color: white;
 }
+.card-img-top{
+    max-height: 500px;
+}

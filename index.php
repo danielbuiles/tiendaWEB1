@@ -12,11 +12,11 @@
     <div class="Player">
     <h2>Administracion de Productos</h2>
     <div class="NM">
-    <input type="Text" placeholder="Nombre Producto"  class="Np" Name="Np">
-    <input type="Text" placeholder="Marca Producto" class="Mp" Name="Mp">
+    <input type="Text" placeholder="Nombre Producto"  class="Np" Name="Nombrep">
+    <input type="Text" placeholder="Marca Producto" class="Mp" Name="Marcap">
     </div>
         </br>
-    <input type="number" placeholder="Precio Producto" class="Pp" Name="Pp">
+    <input type="number" placeholder="Precio Producto" class="Pp" Name="Precio">
         </br>
         <textarea class="Descripcion" placeholder="Descripcion" Name="Descripcion"></textarea>
         <input type="Text" placeholder="Url-imajen" Name="Url" class=Pp>

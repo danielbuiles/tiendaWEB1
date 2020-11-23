@@ -1,17 +1,15 @@
 <?php
     include("DB_Productos.php");
     if (isset($_POST["Btn"])) {
-        $NombreProducto=$_POST["Np"];
-        $MarcaProducto=$_POST["Mp"];
-        $PrecioProducto=$_POST["Pp"];
+        $NombreProducto=$_POST["Nombrep"];
+        $MarcaProducto=$_POST["Marcap"];
+        $PrecioProducto=$_POST["Precio"];
         $Descripcion=$_POST["Descripcion"];
         $Url=$_POST["Url"];
 
         $Catch=new Base_Datos();
         
-        $consultaSQL="INSERT INTO `productos`(`Nombre`, `Marca`, `Precio`, `Descripcion`, `Foto`) VALUES ('$NombreProducto','$MarcaProducto','$PrecioProducto','$Descripcion','$Url')";
-
-        $Catch->AgregarDatos($consultaSQL);
+        $consultaSQL="INSERT INTO productos (Nombre, Marca, Precio,Descripcion,Foto) VALUES ('$NombreProducto','$MarcaProducto','$PrecioProducto','$Descripcion','$Url')";
 
         $Resultado=$Catch->AgregarDatos($consultaSQL);
     }

@@ -47,6 +47,20 @@ class Base_Datos
 
         $get=$Catch->execute();
     }
+    public function EditarDatos($consultaSQL){
+        $Conexion=$this->Conexion_DB();
+
+        $Preparar=$Conexion->prepare($consultaSQL);
+
+        $Ejecucion=$Preparar->execute();
+
+        if ($Ejecucion) {
+            echo("bien");
+        }
+        else{
+            echo("Error");
+        }
+    }
 }
 
 ?>

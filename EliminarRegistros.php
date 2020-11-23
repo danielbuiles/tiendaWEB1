@@ -8,6 +8,8 @@ $catch=new Base_Datos();
 $consultaSQL="DELETE FROM productos WHERE id_Producto='$id'";
 
 $catch->EliminarDatos($consultaSQL);
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
